@@ -1,0 +1,11 @@
+
+~ Schedule created for input_data.xlsx
+###   Schedule Log   #############################################################
+~ Number of students: 3
+~ Number of students with valid schedule(s): 2
+~ Percentage of students with valid schedule(s): 66.66666666666667%
+Result saved.
+###   Debug Info   ###############################################################
+~ Timeslot No. = 7
+~ Number of classes = 10
+~ List of classes = ['toefl 1', 'algebra 2', 'E 500', 'algebra 1', 'ap phy', 'psy', 'ap geo', 'bio', 'pe1', 'ap che']
