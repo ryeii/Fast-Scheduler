@@ -66,6 +66,8 @@ with gr.Blocks() as iface:
         with gr.Column():
             log_output = gr.Textbox(label="Log")
             scheduled_courses_output = gr.Dataframe(label="Scheduling Results")
+            download_button = gr.File(interactive=False, label="Download Results")
+    
     
     submit_button.click(
         fn=update_input_data,
@@ -76,7 +78,8 @@ with gr.Blocks() as iface:
     schedule_button.click(
         fn=schedule_courses,
         inputs=[input_file, timeslots_output, student_preferences_output],
-        outputs=[scheduled_courses_output, log_output],
+        outputs=[scheduled_courses_output, log_output, download_button],
     )
+
 
 iface.launch()
