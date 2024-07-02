@@ -82,4 +82,4 @@ with gr.Blocks() as iface:
     )
 
 
-iface.launch(share=True)
+iface.launch()
