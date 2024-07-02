@@ -36,10 +36,10 @@ def schedule_courses(input_file, timeslots_df, student_preferences_df):
         result_df = pd.read_excel("result.xlsx")
         with open("log.txt", "r") as file:
             log_text = file.read()
-        return result_df, log_text
+        return result_df, log_text, "result.xlsx"
     else:
         error_df = pd.DataFrame({"Error": ["An error occurred during scheduling."]})
-        return error_df, "An error occurred during scheduling."
+        return error_df, "An error occurred during scheduling.", ""
 
 # Create a Gradio interface using Blocks
 with gr.Blocks() as iface:
@@ -65,8 +65,8 @@ with gr.Blocks() as iface:
             student_preferences_output = gr.Dataframe(label="Student Preferences")
         with gr.Column():
             log_output = gr.Textbox(label="Log")
-            scheduled_courses_output = gr.Dataframe(label="Scheduling Results")
             download_button = gr.File(interactive=False, label="Download Results")
+            scheduled_courses_output = gr.Dataframe(label="Scheduling Results")
     
     
     submit_button.click(
