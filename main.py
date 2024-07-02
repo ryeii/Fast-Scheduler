@@ -48,7 +48,7 @@ with gr.Blocks() as iface:
     with gr.Row():
         with gr.Column():
             gr.Markdown("""In this column:\n
-                        1. upload the timeslots and student preferences file then click "submit" to update the input data.\n
+                        1. upload the timeslots and student preferences file then click "submit" to update the input data. For example input file, see https://github.com/ryeii/Fast-Scheduler/blob/main/input_data.xlsx\n
                         1. click "schedule" to run the scheduling process.\n
                         1. modify the input data in the table and schedule again.""")
         with gr.Column():
@@ -82,4 +82,4 @@ with gr.Blocks() as iface:
     )
 
 
-iface.launch()
+iface.launch(share=True)
